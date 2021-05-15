@@ -219,43 +219,34 @@ def create_filters(date=None, start_date=None, end_date=None,
                    diameter_min=None, diameter_max=None,
                    hazardous=None):
     """
-    Create a collection of filters from user-specified criteria.
+    Returns a collection of filters from user-specified criteria.
 
-    Parameters
-    ----------
-    date: None
-            A date on which a matching CloseApproach occurs.
-    start_date: None
-            A date on or after which a matching CloseApproach
-            occurs.
-    end_date: None
-            A date on or before which a matching CloseApproach
-            occurs.
-    distance_min: None
-            A minimum nominal approach distance for a matching
-            CloseApproach.
-    distance_max: None
-            A maximum nominal approach distance for a matching
-            CloseApproach.
-    velocity_min: None
-            A minimum relative approach velocity for a matching
-            CloseApproach   .
-    velocity_max: None
-            A maximum relative approach velocity for a matching
-            CloseApproach.
-    diameter_min: None
-            A minimum diameter of the NEO of a matching
-            CloseApproach.
-    diameter_max: None
-            A maximum diameter of the NEO of a matching
-            CloseApproach.
-    hazardous: None
-            Whether the NEO of a matching CloseApproach is
-            potentially hazardous.
+            Parameters:
 
-    Return
-    ------
-    A collection of filters for use with query.
+                date (None): A date on which a matching CloseApproach
+                            occurs.
+                start_date (None): A date on or after which a matching
+                            CloseApproachoccurs.
+                end_date (None): A date on or before which a matching
+                            CloseApproach occurs.
+                distance_min (None): A minimum nominal approach distance
+                            for a matching CloseApproach.
+                distance_max (None): A maximum nominal approach distance
+                            for a matching CloseApproach.
+                velocity_min (None): A minimum relative approach velocity
+                            for a matching CloseApproach.
+                velocity_max (None): A maximum relative approach velocity
+                            for a matching CloseApproach.
+                diameter_min (None): A minimum diameter of the NEO of a
+                            matching CloseApproach.
+                diameter_max (None): A maximum diameter of the NEO of a
+                            matching CloseApproach.
+                hazardous (None): Whether the NEO of a matching CloseApproach
+                            is potentially hazardous.
+
+            Returns: 
+            
+                (tuple): A collection of filters for use with query.
     """
     filters = list()
     if date is not None:
@@ -285,18 +276,15 @@ def limit(iterator, n=None):
     """
     Produce a limited stream of values from an iterator.
 
-    Parameters
-    ----------
-    iterator: int
-        An iterator of values.
-    n: None
-        The maximum number of values to produce.
-    yield:
-        The first (at most) n values from the iterator.
+            Parameters:
 
-    Return
-    ------
-    None
+                iterator (int): An iterator of values.
+                n (None): The maximum number of values to produce.
+                yield : The first (at most) n values from the iterator.
+
+            Returns: 
+            
+                None
     """
     for i, v in enumerate(iterator):
         yield v

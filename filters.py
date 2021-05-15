@@ -54,7 +54,8 @@ class AttributeFilter:
         raise UnsupportedCriterionError
 
     def __repr__(self):
-        """Return """
+        """Return `repr(self)`, a computer-readable string representation
+        of this object"""
         return f"{self.__class__.__name__}(op=operator.{self.op.__name__}, "
         "value={self.value})"
 
@@ -72,7 +73,7 @@ class DateFilter(AttributeFilter):
         """
         Parameters
         ----------
-        cls: str
+        cls: self
         approach: str
 
         Returns
@@ -95,7 +96,7 @@ class DistanceFilter(AttributeFilter):
         """
         Parameters
         ----------
-        cls: str
+        cls: self
         approach: str
 
         Returns
@@ -118,7 +119,7 @@ class VelocityFilter(AttributeFilter):
         """
         Parameters
         ----------
-        cls: str
+        cls: self
         approach: str
 
         Returns
@@ -141,7 +142,7 @@ class DiameterFilter(AttributeFilter):
         """
         Parameters
         ----------
-        cls: str
+        cls: self
         approach: str
 
         Returns
@@ -164,7 +165,7 @@ class HazardousFilter(AttributeFilter):
         """
         Parameters
         ----------
-        cls: str
+        cls: self
         approach: str
 
         Returns
@@ -245,7 +246,6 @@ def create_filters(date=None, start_date=None, end_date=None,
 
 def limit(iterator, n=None):
     """Produce a limited stream of values from an iterator.
-
     If `n` is 0 or None, don't limit the iterator at all.
 
     :param iterator: An iterator of values.
